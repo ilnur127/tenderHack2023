@@ -1,0 +1,76 @@
+.header {
+  height: 80px;
+  filter: drop-shadow(0px 10px 30px rgba(38, 75, 130, 0.1));
+  margin: 0 2.5%;
+  display: grid;
+  grid-template-columns: 3fr 4fr 2fr;
+  align-items: center;
+}
+.routes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+.routes div {
+  display: flex;
+  grid-column-gap: 10px;
+  cursor: pointer;
+}
+.routes div svg,
+.routes div span {
+  opacity: 0.85;
+  color: #264b82;
+}
+.routes div:hover svg,
+.routes div:hover span {
+  opacity: 1;
+}
+.lastSection {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.notificationBlock {
+  position: relative;
+}
+.notificationBlock div {
+  width: 16px;
+  height: 16px;
+  background-color: #db2b21;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.userInfoBlock {
+  display: flex;
+  grid-column-gap: 10px;
+  margin-left: 8px;
+  border-left: 1px solid #d4dbe6;
+  padding-left: 8px;
+}
+.userInfoBlock div {
+  display: grid;
+  text-align: end;
+}
+.userInfoBlock div span:first-child {
+  font-size: 16px;
+  font-weight: 700;
+}
+.userInfoBlock div span:last-child {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.5;
+}
+.main {
+  min-height: calc(100vh - 80px);
+  background-color: #f5f8fc;
+  background-image: url('./icons/Патерн.svg');
+  background-position: 130px -180px;
+  background-repeat: repeat-x;
+}

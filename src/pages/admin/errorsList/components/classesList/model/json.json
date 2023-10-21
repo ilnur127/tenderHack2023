@@ -1,0 +1,775 @@
+{
+  "data": [
+    {
+      "classEnum": "SERVER",
+      "errorModelList": [
+        {
+          "type": "UNKNOWN",
+          "key": "",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "DECIDED",
+          "count": 63
+        },
+        {
+          "type": "TIMEOUT",
+          "key": "The wait operation timed out",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "DECIDED",
+          "count": 5031
+        },
+        {
+          "type": "PROCESS",
+          "key": "The handle is invalid.",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 9
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unhandled exception in action execution",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 104
+        },
+        {
+          "type": "AUTH",
+          "key": "Unable to verify and save signature",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "DECIDED",
+          "count": 198
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unable to upload files",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 16
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unexpected error occured",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1346
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unable to parse request, query:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 6
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unable to set failed for command:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unable to send",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 236
+        },
+        {
+          "type": "PROCESS",
+          "key": "Response already has started, cannot send ErrorDetails object",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 56
+        },
+        {
+          "type": "PROCESS",
+          "key": "Connection ID",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 57
+        },
+        {
+          "type": "PROCESS",
+          "key": "An error occurred during stat collection",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 24
+        },
+        {
+          "type": "PROCESS",
+          "key": "An error has occurred in the task of cleaning SkuOfferMatchResult",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 5
+        },
+        {
+          "type": "AUTH",
+          "key": "An exception has occu`rred in the task of verification soon expire user machine readable powers of attorney",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 0
+        },
+        {
+          "type": "PROCESS",
+          "key": "An error occurred using a transaction.",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 99
+        },
+        {
+          "type": "PROCESS",
+          "key": "An exception occurred while iterating",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 83
+        },
+        {
+          "type": "PROCESS",
+          "key": "An exception was thrown during execution",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 2
+        },
+        {
+          "type": "PROCESS",
+          "key": "An unhandled exception has occurred while executing the request.",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1
+        },
+        {
+          "type": "PROCESS",
+          "key": "Exception SendCommand command:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 329
+        },
+        {
+          "type": "PROCESS",
+          "key": "Exception occurred while processing message.",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 53
+        },
+        {
+          "type": "JOB",
+          "key": "Execution error, job:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 6776
+        },
+        {
+          "type": "PROCESS",
+          "key": "Exception while Executing Pp3.Common.Bl.FileStorage",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1
+        },
+        {
+          "type": "PROCESS",
+          "key": "Pp3.Contracts.Dto.Contract.Action",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 3458
+        },
+        {
+          "type": "RABBIT",
+          "key": "S-FAULT rabbitmq:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 132
+        },
+        {
+          "type": "RABBIT",
+          "key": "R-FAULT rabbitmq:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 49
+        },
+        {
+          "type": "TIMEOUT",
+          "key": "Execution Timeout Expired.",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 5033
+        },
+        {
+          "type": "PROCESS",
+          "key": "Failed to invoke hub method",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 3
+        },
+        {
+          "type": "JOB",
+          "key": "job error",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 226
+        },
+        {
+          "type": "JOB",
+          "key": "Immediate job:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 697
+        }
+      ]
+    },
+    {
+      "classEnum": "INTEGRATION",
+      "errorModelList": [
+        {
+          "type": "PROCESS",
+          "key": "Unhandled error during Ru.SupplierPortal.Dto",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 0
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unhandled error during Pp3.PublicApi",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 60
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unhandled error during Ru.SupplierPortal",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 7
+        },
+        {
+          "type": "EVENT",
+          "key": "Unhandled error during Org.Keycloak.Events",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 39
+        },
+        {
+          "type": "DATA",
+          "key": "Unable to get data",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 49
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unable to execute command: OperationComplete",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 8
+        },
+        {
+          "type": "AUTH",
+          "key": "Unable to get integration token",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 2121
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unable to process command:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1531
+        },
+        {
+          "type": "AUTH",
+          "key": "OpComplete:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 13
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unhandled error during Pp3.Contracts",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 26
+        },
+        {
+          "type": "EVENT",
+          "key": "Unhandled error during Pp3.Common.Events.",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unhandled error during Pp3.Integration",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 3
+        },
+        {
+          "type": "PROCESS",
+          "key": "Unhandled error during Pp3.Integration",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 0
+        },
+        {
+          "type": "KALUGA",
+          "key": "Kaluga workflowId:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1354
+        }
+      ]
+    },
+    {
+      "classEnum": "SERVER_HANDLING",
+      "errorModelList": [
+        {
+          "type": "PROCESS",
+          "key": "Ошибка при запросе списка интеграционного обмена",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 2
+        },
+        {
+          "type": "PROCESS",
+          "key": "Реиндексация компаний завершилась с ошибкой",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1
+        },
+        {
+          "type": "DATA",
+          "key": "Файл с fileId:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 15
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка при обращении к сервису",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 3
+        },
+        {
+          "type": "EVENT",
+          "key": "Ошибка при обработке события",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 58
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка при поиске",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 18
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка при опросе очереди результатов",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 154
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка публикации события",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка при расчёте",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 4
+        },
+        {
+          "type": "PROCESS",
+          "key": "Произошла ошибка импорта:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 10
+        },
+        {
+          "type": "PROCESS",
+          "key": "Проверка приглашений",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 84
+        },
+        {
+          "type": "EVENT",
+          "key": "Ошибка обработки события изменения сброса кеша пользователя",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 65
+        },
+        {
+          "type": "DATA",
+          "key": "Ошибка обработки запроса на регистрацию/изменение данных компании",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 6403
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка обращения к api внешней системы",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 5
+        },
+        {
+          "type": "EVENT",
+          "key": "Ошибка обработки события измнения сущности",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1
+        },
+        {
+          "type": "PROCESS",
+          "key": "Событие обработано с ошибками:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка при обработке запроса",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 3
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка получения файлов из каталога",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 132
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка запроса получения информации об операции интеграции:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 2
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка запроса данных из УАС",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 49
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка индексации оферт",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 3
+        },
+        {
+          "type": "DATA",
+          "key": "Ошибка запроса статуса самозанятого",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 12
+        },
+        {
+          "type": "DATA",
+          "key": "Не найдена компания с идентификатором:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 51
+        },
+        {
+          "type": "DATA",
+          "key": "System.InvalidOperationException:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 134
+        },
+        {
+          "type": "PROCESS",
+          "key": "Данные не могут быть обработаны по причине:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1675
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка при вызове сервиса ЕИС",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 5
+        },
+        {
+          "type": "PROCESS",
+          "key": "Для команды интеграции",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 10
+        },
+        {
+          "type": "PROCESS",
+          "key": "Архив (УАС) не загрузился/не загружался.",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 6
+        },
+        {
+          "type": "DATA",
+          "key": "Данные не могут быть проимпортированы по причине:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 44392
+        },
+        {
+          "type": "PROCESS",
+          "key": "Невозможно отправить результаты комнады",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 4
+        },
+        {
+          "type": "PROCESS",
+          "key": "Невозможно запросить данные из УАС",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 49
+        },
+        {
+          "type": "DATA",
+          "key": "Необработанная ошибка валидации МЧД попытка добавления дубликата",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 14
+        },
+        {
+          "type": "PROCESS",
+          "key": "Невозможно скачать файл по ссылке:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 24
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка актуализации блокировок компании.",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 51
+        },
+        {
+          "type": "AUTH",
+          "key": "Ошибка авторизации в интеграционном апи.",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 20
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка доступа к сервису капчи",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1
+        },
+        {
+          "type": "PROCESS",
+          "key": "Ошибка выполнения подписчика на событие завершения применения транзакции",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 338
+        },
+        {
+          "type": "DATA",
+          "key": "Не найден КПГЗ с Id",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 20
+        },
+        {
+          "type": "AUTH",
+          "key": "МЧД: подписание по старому сертификату",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 3
+        },
+        {
+          "type": "PROCESS",
+          "key": "Не удалось скачать файл из ЕИС по ссылке:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 2
+        }
+      ]
+    }
+  ]
+}
