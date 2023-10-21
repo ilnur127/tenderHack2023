@@ -78,7 +78,7 @@
 .errorsList_subClass__header {
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 2fr 8fr;
   margin-bottom: 12px;
 }
 .errorsList_subClass__header div {

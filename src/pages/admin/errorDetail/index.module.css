@@ -1,0 +1,125 @@
+.main {
+  padding: 25px 2.5vw;
+}
+.indicators {
+  display: flex;
+  grid-column-gap: 10px;
+}
+.indicator {
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+}
+.indicator_class {
+  background: #264b82;
+}
+.indicator_type {
+  background: #0d9b68;
+}
+.cardInfo h3 {
+  color: #8c8c8c;
+  font-size: 16px;
+  margin: 20px 20px;
+}
+.cardInfo_content {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  display: grid;
+  grid-row-gap: 20px;
+}
+.cardInfo_content__firstRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 25px;
+}
+.cardInfo_content label {
+  display: grid;
+  grid-row-gap: 12px;
+}
+.cardInfo_content label input,
+.cardInfo_content label textarea {
+  border-radius: 4px;
+  border: 1px solid #e7e8eb;
+  background: #fcfcfd;
+  padding: 8px 16px;
+}
+.dateBlock {
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 10px;
+  max-height: 300px;
+  overflow: auto;
+}
+.dateBlock div {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #e7e8eb;
+  background: #fcfcfd;
+}
+.actionsBlock {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  grid-column-gap: 30px;
+  margin-top: 25px;
+}
+.actionsBlock > * {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  background: none;
+  grid-column-gap: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px;
+}
+.actionsBlock button {
+  cursor: pointer;
+}
+.actionsBlock_back {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.actionsBlock_save {
+  background: #db2b21;
+  color: #fff;
+}
+.actionsBlock_publishAll {
+  background: #264b82;
+  color: #fff;
+}
+.actionsBlock_publishCurrent {
+  flex-direction: column;
+  grid-row-gap: 5px;
+  padding: 0px;
+}
+.actionsBlock_publishCurrent h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.actionsBlock_publishCurrent div {
+  height: 40px;
+  width: calc(100% - 10px);
+  border: 1px solid #264b82;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.actionsBlock_publishCurrent input {
+  width: calc(100% - 40px);
+  height: 100%;
+  border: none;
+  background: none;
+}
+.actionsBlock_publishCurrent input:focus {
+  outline: none;
+}
+.actionsBlock_publishCurrent button {
+  background: none;
+  border: none;
+}

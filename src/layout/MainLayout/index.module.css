@@ -11,18 +11,19 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
 }
-.routes div {
+.routesItem {
   display: flex;
   grid-column-gap: 10px;
   cursor: pointer;
+  text-decoration: none;
 }
-.routes div svg,
-.routes div span {
+.routesItem svg,
+.routesItem span {
   opacity: 0.85;
   color: #264b82;
 }
-.routes div:hover svg,
-.routes div:hover span {
+.routesItem:hover svg,
+.routesItem:hover span {
   opacity: 1;
 }
 .lastSection {

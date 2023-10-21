@@ -2,772 +2,1129 @@
   "data": [
     {
       "classEnum": "SERVER",
+      "classDescription": "Сервер",
       "errorModelList": [
         {
+          "id": 1,
           "type": "UNKNOWN",
+          "typeDescription": "Неизвестная ошибка",
           "key": "",
           "title": null,
           "description": null,
-          "solution": null,
-          "status": "DECIDED",
-          "count": 63
+          "solution": "sdfsdfsdfdsf",
+          "status": "NEW",
+          "count": 63,
+          "lastDate": "2023-10-16T12:43:09"
         },
         {
+          "id": 215,
           "type": "TIMEOUT",
+          "typeDescription": "Ошибки тайм-аута",
           "key": "The wait operation timed out",
           "title": null,
           "description": null,
           "solution": null,
-          "status": "DECIDED",
-          "count": 5031
+          "status": "NEW",
+          "count": 5031,
+          "lastDate": "2023-10-16T13:01:04"
         },
         {
+          "id": 214,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "The handle is invalid.",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 9
+          "count": 9,
+          "lastDate": "2023-10-16T06:00:32"
         },
         {
+          "id": 235,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unhandled exception in action execution",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 104
+          "count": 104,
+          "lastDate": "2023-10-16T12:58:59"
         },
         {
+          "id": 225,
           "type": "AUTH",
+          "typeDescription": "Ошибки авторизации",
           "key": "Unable to verify and save signature",
           "title": null,
           "description": null,
           "solution": null,
-          "status": "DECIDED",
-          "count": 198
+          "status": "NEW",
+          "count": 198,
+          "lastDate": "2023-10-16T13:11:04"
         },
         {
+          "id": 224,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unable to upload files",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 16
+          "count": 16,
+          "lastDate": "2023-10-15T14:06:23"
         },
         {
+          "id": 226,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unexpected error occured",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1346
+          "count": 1346,
+          "lastDate": "2023-10-16T13:28:57"
         },
         {
+          "id": 219,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unable to parse request, query:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 6
+          "count": 6,
+          "lastDate": "2023-10-12T17:55:37"
         },
         {
+          "id": 223,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unable to set failed for command:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1
+          "count": 1,
+          "lastDate": "2023-10-12T02:20:24"
         },
         {
+          "id": 222,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unable to send",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 236
+          "count": 236,
+          "lastDate": "2023-10-16T12:46:12"
         },
         {
+          "id": 209,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Response already has started, cannot send ErrorDetails object",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 56
+          "count": 56,
+          "lastDate": "2023-10-16T11:54:49"
         },
         {
+          "id": 192,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Connection ID",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 57
+          "count": 57,
+          "lastDate": "2023-10-16T06:01:24"
         },
         {
+          "id": 185,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "An error occurred during stat collection",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 24
+          "count": 24,
+          "lastDate": "2023-10-15T06:37:41"
         },
         {
+          "id": 184,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "An error has occurred in the task of cleaning SkuOfferMatchResult",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 5
+          "count": 5,
+          "lastDate": "2023-10-15T04:57:16"
         },
         {
+          "id": 187,
           "type": "AUTH",
+          "typeDescription": "Ошибки авторизации",
           "key": "An exception has occu`rred in the task of verification soon expire user machine readable powers of attorney",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 0
+          "count": 0,
+          "lastDate": null
         },
         {
+          "id": 186,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "An error occurred using a transaction.",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 99
+          "count": 99,
+          "lastDate": "2023-10-15T07:26:31"
         },
         {
+          "id": 189,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "An exception occurred while iterating",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 83
+          "count": 83,
+          "lastDate": "2023-10-16T12:39:32"
         },
         {
+          "id": 190,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "An exception was thrown during execution",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 2
+          "count": 2,
+          "lastDate": "2023-10-15T03:56:42"
         },
         {
+          "id": 191,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "An unhandled exception has occurred while executing the request.",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1
+          "count": 1,
+          "lastDate": "2023-10-15T05:38:03"
         },
         {
+          "id": 197,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Exception SendCommand command:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 329
+          "count": 329,
+          "lastDate": "2023-10-16T12:46:12"
         },
         {
+          "id": 196,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Exception occurred while processing message.",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 53
+          "count": 53,
+          "lastDate": "2023-10-16T12:00:01"
         },
         {
+          "id": 199,
           "type": "JOB",
+          "typeDescription": "Ошибки сервиса JOB",
           "key": "Execution error, job:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 6776
+          "count": 6776,
+          "lastDate": "2023-10-16T13:01:04"
         },
         {
+          "id": 198,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Exception while Executing Pp3.Common.Bl.FileStorage",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1
+          "count": 1,
+          "lastDate": "2023-10-09T14:41:01"
         },
         {
+          "id": 208,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Pp3.Contracts.Dto.Contract.Action",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 3458
+          "count": 3458,
+          "lastDate": "2023-10-16T13:30:06"
         },
         {
+          "id": 211,
           "type": "RABBIT",
+          "typeDescription": "Ошибки брокера сообщений RabbitMQ",
           "key": "S-FAULT rabbitmq:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 132
+          "count": 132,
+          "lastDate": "2023-10-16T10:21:22"
         },
         {
+          "id": 210,
           "type": "RABBIT",
+          "typeDescription": "Ошибки брокера сообщений RabbitMQ",
           "key": "R-FAULT rabbitmq:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 49
+          "count": 49,
+          "lastDate": "2023-10-16T12:26:15"
         },
         {
+          "id": 200,
           "type": "TIMEOUT",
+          "typeDescription": "Ошибки тайм-аута",
           "key": "Execution Timeout Expired.",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 5033
+          "count": 5033,
+          "lastDate": "2023-10-16T13:01:04"
         },
         {
+          "id": 203,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Failed to invoke hub method",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 3
+          "count": 3,
+          "lastDate": "2023-10-11T16:33:26"
         },
         {
+          "id": 205,
           "type": "JOB",
+          "typeDescription": "Ошибки сервиса JOB",
           "key": "job error",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 226
+          "count": 226,
+          "lastDate": "2023-10-16T13:01:04"
         },
         {
+          "id": 204,
           "type": "JOB",
+          "typeDescription": "Ошибки сервиса JOB",
           "key": "Immediate job:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 697
+          "count": 697,
+          "lastDate": "2023-10-16T03:08:25"
         }
       ]
     },
     {
       "classEnum": "INTEGRATION",
+      "classDescription": "Сервисы интеграции",
       "errorModelList": [
         {
+          "id": 233,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unhandled error during Ru.SupplierPortal.Dto",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 0
+          "count": 0,
+          "lastDate": null
         },
         {
+          "id": 232,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unhandled error during Pp3.PublicApi",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 60
+          "count": 60,
+          "lastDate": "2023-10-13T11:01:15"
         },
         {
+          "id": 234,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unhandled error during Ru.SupplierPortal",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 7
+          "count": 7,
+          "lastDate": "2023-10-12T13:59:58"
         },
         {
+          "id": 227,
           "type": "EVENT",
+          "typeDescription": "Ошибки вызова события",
           "key": "Unhandled error during Org.Keycloak.Events",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 39
+          "count": 39,
+          "lastDate": "2023-10-12T19:39:44"
         },
         {
+          "id": 217,
           "type": "DATA",
+          "typeDescription": "Ошибки данных",
           "key": "Unable to get data",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 49
+          "count": 49,
+          "lastDate": "2023-10-16T13:00:00"
         },
         {
+          "id": 216,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unable to execute command: OperationComplete",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 8
+          "count": 8,
+          "lastDate": "2023-10-12T18:00:01"
         },
         {
+          "id": 218,
           "type": "AUTH",
+          "typeDescription": "Ошибки авторизации",
           "key": "Unable to get integration token",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 2121
+          "count": 2121,
+          "lastDate": "2023-10-09T06:01:05"
         },
         {
+          "id": 220,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unable to process command:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1531
+          "count": 1531,
+          "lastDate": "2023-10-16T13:30:17"
         },
         {
+          "id": 207,
           "type": "AUTH",
+          "typeDescription": "Ошибки авторизации",
           "key": "OpComplete:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 13
+          "count": 13,
+          "lastDate": "2023-10-12T18:21:07"
         },
         {
+          "id": 229,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unhandled error during Pp3.Contracts",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 26
+          "count": 26,
+          "lastDate": "2023-10-13T09:16:43"
         },
         {
+          "id": 228,
           "type": "EVENT",
+          "typeDescription": "Ошибки вызова события",
           "key": "Unhandled error during Pp3.Common.Events.",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1
+          "count": 1,
+          "lastDate": "2023-10-12T16:15:12"
         },
         {
+          "id": 231,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unhandled error during Pp3.Integration",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 3
+          "count": 3,
+          "lastDate": "2023-10-12T14:16:41"
         },
         {
+          "id": 230,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Unhandled error during Pp3.Integration",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 0
+          "count": 0,
+          "lastDate": null
         },
         {
+          "id": 206,
           "type": "KALUGA",
+          "typeDescription": "Ошибки сервиса Калуга",
           "key": "Kaluga workflowId:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1354
+          "count": 1354,
+          "lastDate": "2023-10-16T10:01:21"
         }
       ]
     },
     {
       "classEnum": "SERVER_HANDLING",
+      "classDescription": "Фронт-офисная система",
       "errorModelList": [
         {
+          "id": 262,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка при запросе списка интеграционного обмена",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 2
+          "count": 2,
+          "lastDate": "2023-10-16T12:19:55"
         },
         {
+          "id": 272,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Реиндексация компаний завершилась с ошибкой",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1
+          "count": 1,
+          "lastDate": "2023-10-12T06:22:57"
         },
         {
+          "id": 274,
           "type": "DATA",
+          "typeDescription": "Ошибки данных",
           "key": "Файл с fileId:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 15
+          "count": 15,
+          "lastDate": "2023-10-12T16:15:03"
         },
         {
+          "id": 265,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка при обращении к сервису",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 3
+          "count": 3,
+          "lastDate": "2023-10-13T18:06:34"
         },
         {
+          "id": 264,
           "type": "EVENT",
+          "typeDescription": "Ошибки вызова события",
           "key": "Ошибка при обработке события",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 58
+          "count": 58,
+          "lastDate": "2023-10-13T10:09:28"
         },
         {
+          "id": 267,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка при поиске",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 18
+          "count": 18,
+          "lastDate": "2023-10-16T03:01:13"
         },
         {
+          "id": 266,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка при опросе очереди результатов",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 154
+          "count": 154,
+          "lastDate": "2023-10-13T21:55:57"
         },
         {
+          "id": 269,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка публикации события",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1
+          "count": 1,
+          "lastDate": "2023-10-15T06:01:11"
         },
         {
+          "id": 268,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка при расчёте",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 4
+          "count": 4,
+          "lastDate": "2023-10-15T05:04:13"
         },
         {
+          "id": 271,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Произошла ошибка импорта:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 10
+          "count": 10,
+          "lastDate": "2023-10-13T03:44:33"
         },
         {
+          "id": 270,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Проверка приглашений",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 84
+          "count": 84,
+          "lastDate": "2023-10-15T06:00:43"
         },
         {
+          "id": 257,
           "type": "EVENT",
+          "typeDescription": "Ошибки вызова события",
           "key": "Ошибка обработки события изменения сброса кеша пользователя",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 65
+          "count": 65,
+          "lastDate": "2023-10-13T11:26:28"
         },
         {
+          "id": 256,
           "type": "DATA",
+          "typeDescription": "Ошибки данных",
           "key": "Ошибка обработки запроса на регистрацию/изменение данных компании",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 6403
+          "count": 6403,
+          "lastDate": "2023-10-16T13:30:06"
         },
         {
+          "id": 259,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка обращения к api внешней системы",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 5
+          "count": 5,
+          "lastDate": "2023-10-16T12:56:33"
         },
         {
+          "id": 258,
           "type": "EVENT",
+          "typeDescription": "Ошибки вызова события",
           "key": "Ошибка обработки события измнения сущности",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1
+          "count": 1,
+          "lastDate": "2023-10-12T16:15:12"
         },
         {
+          "id": 273,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Событие обработано с ошибками:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1
+          "count": 1,
+          "lastDate": "2023-10-11T16:45:16"
         },
         {
+          "id": 263,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка при обработке запроса",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 3
+          "count": 3,
+          "lastDate": "2023-10-12T14:16:41"
         },
         {
+          "id": 260,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка получения файлов из каталога",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 132
+          "count": 132,
+          "lastDate": "2023-10-16T10:21:22"
         },
         {
+          "id": 253,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка запроса получения информации об операции интеграции:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 2
+          "count": 2,
+          "lastDate": "2023-10-09T11:57:33"
         },
         {
+          "id": 252,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка запроса данных из УАС",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 49
+          "count": 49,
+          "lastDate": "2023-10-16T13:00:00"
         },
         {
+          "id": 255,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка индексации оферт",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 3
+          "count": 3,
+          "lastDate": "2023-10-12T05:50:16"
         },
         {
+          "id": 254,
           "type": "DATA",
+          "typeDescription": "Ошибки данных",
           "key": "Ошибка запроса статуса самозанятого",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 12
+          "count": 12,
+          "lastDate": "2023-10-16T06:02:06"
         },
         {
+          "id": 242,
           "type": "DATA",
+          "typeDescription": "Ошибки данных",
           "key": "Не найдена компания с идентификатором:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 51
+          "count": 51,
+          "lastDate": "2023-10-16T09:18:09"
         },
         {
+          "id": 212,
           "type": "DATA",
+          "typeDescription": "Ошибки данных",
           "key": "System.InvalidOperationException:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 134
+          "count": 134,
+          "lastDate": "2023-10-16T13:00:05"
         },
         {
+          "id": 237,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Данные не могут быть обработаны по причине:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1675
+          "count": 1675,
+          "lastDate": "2023-10-16T12:53:01"
         },
         {
+          "id": 261,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка при вызове сервиса ЕИС",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 5
+          "count": 5,
+          "lastDate": "2023-10-13T21:55:57"
         },
         {
+          "id": 239,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Для команды интеграции",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 10
+          "count": 10,
+          "lastDate": "2023-10-15T07:26:33"
         },
         {
+          "id": 236,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Архив (УАС) не загрузился/не загружался.",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 6
+          "count": 6,
+          "lastDate": "2023-10-16T09:00:04"
         },
         {
+          "id": 238,
           "type": "DATA",
+          "typeDescription": "Ошибки данных",
           "key": "Данные не могут быть проимпортированы по причине:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 44392
+          "count": 44392,
+          "lastDate": "2023-10-15T23:59:58"
         },
         {
+          "id": 245,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Невозможно отправить результаты комнады",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 4
+          "count": 4,
+          "lastDate": "2023-10-09T19:28:05"
         },
         {
+          "id": 244,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Невозможно запросить данные из УАС",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 49
+          "count": 49,
+          "lastDate": "2023-10-16T13:00:00"
         },
         {
+          "id": 247,
           "type": "DATA",
+          "typeDescription": "Ошибки данных",
           "key": "Необработанная ошибка валидации МЧД попытка добавления дубликата",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 14
+          "count": 14,
+          "lastDate": "2023-10-12T15:50:47"
         },
         {
+          "id": 246,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Невозможно скачать файл по ссылке:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 24
+          "count": 24,
+          "lastDate": "2023-10-15T14:06:23"
         },
         {
+          "id": 249,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка актуализации блокировок компании.",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 51
+          "count": 51,
+          "lastDate": "2023-10-16T09:18:09"
         },
         {
+          "id": 248,
           "type": "AUTH",
+          "typeDescription": "Ошибки авторизации",
           "key": "Ошибка авторизации в интеграционном апи.",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 20
+          "count": 20,
+          "lastDate": "2023-10-12T12:14:01"
         },
         {
+          "id": 251,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка доступа к сервису капчи",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 1
+          "count": 1,
+          "lastDate": "2023-10-16T12:26:15"
         },
         {
+          "id": 250,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Ошибка выполнения подписчика на событие завершения применения транзакции",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 338
+          "count": 338,
+          "lastDate": "2023-10-16T12:46:12"
         },
         {
+          "id": 241,
           "type": "DATA",
+          "typeDescription": "Ошибки данных",
           "key": "Не найден КПГЗ с Id",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 20
+          "count": 20,
+          "lastDate": "2023-10-12T11:16:09"
         },
         {
+          "id": 240,
           "type": "AUTH",
+          "typeDescription": "Ошибки авторизации",
           "key": "МЧД: подписание по старому сертификату",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 3
+          "count": 3,
+          "lastDate": "2023-10-12T18:05:00"
         },
         {
+          "id": 243,
           "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
           "key": "Не удалось скачать файл из ЕИС по ссылке:",
           "title": null,
           "description": null,
           "solution": null,
           "status": "NEW",
-          "count": 2
+          "count": 2,
+          "lastDate": "2023-10-11T14:54:27"
+        }
+      ]
+    },
+    {
+      "classEnum": "DB",
+      "classDescription": "База данных",
+      "errorModelList": [
+        {
+          "id": 213,
+          "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
+          "key": "The database operation was expected",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 1,
+          "lastDate": "2023-10-16T12:12:07"
+        },
+        {
+          "id": 221,
+          "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
+          "key": "Unable to process OnFlushDirty interceptors",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 134,
+          "lastDate": "2023-10-16T13:00:05"
+        },
+        {
+          "id": 193,
+          "type": "SQL",
+          "typeDescription": "Ошибки SQL-запросов",
+          "key": "Could not execute command:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 26,
+          "lastDate": "2023-10-16T03:01:13"
+        },
+        {
+          "id": 195,
+          "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
+          "key": "Could not synchronize database state with session",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 18,
+          "lastDate": "2023-10-16T02:01:52"
+        },
+        {
+          "id": 194,
+          "type": "SQL",
+          "typeDescription": "Ошибки SQL-запросов",
+          "key": "Could not execute query:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 5330,
+          "lastDate": "2023-10-16T13:01:04"
+        },
+        {
+          "id": 188,
+          "type": "PROCESS",
+          "typeDescription": "Ошибки процесса",
+          "key": "An exception occurred in the database while saving changes",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 6,
+          "lastDate": "2023-10-15T07:26:31"
+        },
+        {
+          "id": 201,
+          "type": "SQL",
+          "typeDescription": "Ошибки SQL-запросов",
+          "key": "Failed executing DbCommand",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 155,
+          "lastDate": "2023-10-16T12:39:32"
+        },
+        {
+          "id": 202,
+          "type": "SQL",
+          "typeDescription": "Ошибки SQL-запросов",
+          "key": "Failed to execute query batch:",
+          "title": null,
+          "description": null,
+          "solution": null,
+          "status": "NEW",
+          "count": 54,
+          "lastDate": "2023-10-16T00:44:02"
         }
       ]
     }

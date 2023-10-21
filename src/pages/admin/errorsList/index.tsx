@@ -5,10 +5,10 @@ import { useEffect, useState } from 'react'
 import FiltersBlock from './components/filtersBlock'
 import classes from './index.module.css'
 import ClassesList from './components/classesList'
-import { getClassesErrors } from './components/classesList/model'
+import { type TClasses, getClassesErrors } from './components/classesList/model'
 
 export type TFilterData = {
-  category: SingleValue<{ value: string; label: string }>
+  category: SingleValue<TClasses>
   decided: boolean
   new: boolean
 }
@@ -30,7 +30,7 @@ const ErrorsList = (): JSX.Element => {
         }}
       />
       <div className={classes.errorsList}>
-        <ClassesList />
+        <ClassesList selectedFilterData={selectedFilterData} />
       </div>
     </div>
   )

@@ -6,6 +6,8 @@ import classes from '../../index.module.css'
 import { ReactComponent as DecisionSvg } from '../../icons/Decision.svg'
 import { ReactComponent as NewSvg } from '../../icons/new.svg'
 import { ReactComponent as ClassSvg } from '../../icons/Class.svg'
+import { useStore } from 'effector-react'
+import { $classes, TClasses } from '../classesList/model'
 
 const switcherObject = {
   decided: {
@@ -57,47 +59,48 @@ type Props = {
   selectedFilterData: TFilterData
   changeFilterData: (
     name: keyof TFilterData,
-    value: boolean | SingleValue<{ value: string; label: string }>
+    value: boolean | SingleValue<TClasses>
   ) => void
 }
 
 const FiltersBlock = ({
   selectedFilterData,
   changeFilterData,
-}: Props): JSX.Element => (
-  <div className={classes.filtersBlock}>
-    <div className={classes.filtersBlock_content}>
-      <h3>Настройки отображения</h3>
-      <div className={classes.filtersBlock_content__class}>
-        <div className={classes.filtersBlock_content__classLabel}>
-          <ClassSvg />
-          <span>Классы ошибок</span>
-        </div>
-        <Select
-          value={selectedFilterData?.category}
-          onChange={(option) => changeFilterData('category', option)}
-          options={[
-            { value: 'chocolate', label: 'Chocolate' },
-            { value: 'strawberry', label: 'Strawberry' },
-            { value: 'vanilla', label: 'Vanilla' },
-          ]}
-          placeholder="Выберете класс"
-        />
-      </div>
-      <div className={classes.filtersBlock_content__switchers}>
-        {switchers.map(({ name }, i) => (
-          <SwitcherComponent
-            key={i}
-            name={name}
-            selectedFilterData={selectedFilterData}
-            changeSwitcherValue={(name, value) => {
-              changeFilterData(name, value)
-            }}
+}: Props): JSX.Element => {
+  const classesList = useStore($classes)
+  return (
+    <div className={classes.filtersBlock}>
+      <div className={classes.filtersBlock_content}>
+        <h3>Настройки отображения</h3>
+        <div className={classes.filtersBlock_content__class}>
+          <div className={classes.filtersBlock_content__classLabel}>
+            <ClassSvg />
+            <span>Классы ошибок</span>
+          </div>
+          <Select
+            value={selectedFilterData?.category}
+            onChange={(option) => changeFilterData('category', option)}
+            options={classesList}
+            getOptionLabel={(option: TClasses) => option.className}
+            getOptionValue={(option: TClasses) => option.classEnum}
+            placeholder="Выберете класс"
           />
-        ))}
+        </div>
+        <div className={classes.filtersBlock_content__switchers}>
+          {switchers.map(({ name }, i) => (
+            <SwitcherComponent
+              key={i}
+              name={name}
+              selectedFilterData={selectedFilterData}
+              changeSwitcherValue={(name, value) => {
+                changeFilterData(name, value)
+              }}
+            />
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default FiltersBlock
