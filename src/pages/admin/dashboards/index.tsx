@@ -13,7 +13,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js'
-import classes from './index.module.css';
+import classes from './index.module.css'
 import clsx from 'clsx'
 
 function dateRange(startDate: string, endDate: string) {
@@ -48,10 +48,10 @@ const options = {
 }
 
 const color: Record<string, string> = {
-    1: "#264B82",
-    2: "#DB2B21",
-    3: "#0D9B68",
-    4:  "#F67319",
+  1: '#264B82',
+  2: '#DB2B21',
+  3: '#0D9B68',
+  4: '#F67319',
 }
 
 const DashboardsPage = (): JSX.Element => {
@@ -69,55 +69,74 @@ const DashboardsPage = (): JSX.Element => {
       <div></div>
       {statistics && (
         <>
-            <div className={clsx(classes.parentForChart, classes.mainChart)}>
-                {statistics.chart1 && (
-                    <Line
-                    options={options}
-                    data={{
-                        labels: dateRange('2023-10-09', '2023-10-16'),
-                        datasets: statistics.chart1.map((data, i) => ({
-                        label: data.className,
-                        data: data.counts,
-                        borderColor: color[i],
-                        backgroundColor: color[i],
-                        })),
-                    }}
-                    />
-                )}
-                {statistics.chart3 && <Bar options={options} data={{
-                    labels: [''],
-                    datasets: [...statistics.chart3.reduce((arr: {label: string, data: number[], backgroundColor: string}[], curentItem: TChart3, index: number) => {
+          <div className={clsx(classes.parentForChart, classes.mainChart)}>
+            {statistics.chart1 && (
+              <Line
+                options={options}
+                data={{
+                  labels: dateRange('2023-10-09', '2023-10-16'),
+                  datasets: statistics.chart1.map((data, i) => ({
+                    label: data.className,
+                    data: data.counts,
+                    borderColor: color[i],
+                    backgroundColor: color[i],
+                  })),
+                }}
+              />
+            )}
+            {statistics.chart3 && (
+              <Bar
+                options={options}
+                data={{
+                  labels: [''],
+                  datasets: [
+                    ...statistics.chart3.reduce(
+                      (
+                        arr: {
+                          label: string
+                          data: number[]
+                          backgroundColor: string
+                        }[],
+                        curentItem: TChart3,
+                        index: number
+                      ) => {
                         arr.push({
-                            label: curentItem.className + ' решн. задачи',
-                            data: [curentItem.solved],
-                            backgroundColor: color[index],
-                        });
+                          label: curentItem.className + ' решн. задачи',
+                          data: [curentItem.solved],
+                          backgroundColor: color[index],
+                        })
                         arr.push({
-                            label: curentItem.className + ' решн. задачи',
-                            data: [curentItem.unresolved],
-                            backgroundColor: color[index],
-                        });
-                        return arr;
-                    }, [])],
-                }} />}
-            </div>
-            <div className={clsx(classes.parentForChart, classes.typesChart)}>
-                {statistics.chart2 && statistics.chart2.map((type, i) => (
+                          label: curentItem.className + ' решн. задачи',
+                          data: [curentItem.unresolved],
+                          backgroundColor: color[index],
+                        })
+                        return arr
+                      },
+                      []
+                    ),
+                  ],
+                }}
+              />
+            )}
+          </div>
+          <div className={clsx(classes.parentForChart, classes.typesChart)}>
+            {statistics.chart2 &&
+              statistics.chart2.map((type, i) => (
                 <Line
-                    key={i}
-                    options={options}
-                    data={{
+                  key={i}
+                  options={options}
+                  data={{
                     labels: dateRange('2023-10-09', '2023-10-16'),
                     datasets: type.data.map((data, i) => ({
-                        label: data.typeName,
-                        data: data.counts,
-                        borderColor: color[i],
-                        backgroundColor: color[i],
+                      label: data.typeName,
+                      data: data.counts,
+                      borderColor: color[i],
+                      backgroundColor: color[i],
                     })),
-                    }}
+                  }}
                 />
-                ))} 
-            </div>
+              ))}
+          </div>
         </>
       )}
     </div>

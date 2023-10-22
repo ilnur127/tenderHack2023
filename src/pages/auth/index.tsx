@@ -1,11 +1,16 @@
 import { useState } from 'react'
-
-import { authEvent, type TAuthFormData } from './model'
 import { useNavigate } from 'react-router-dom'
 
-const fields: { name: keyof TAuthFormData; title: string }[] = [
-  { name: 'login', title: 'Логин' },
-  { name: 'password', title: 'Пароль' },
+import { authEvent, type TAuthFormData } from './model'
+import classes from './index.module.css'
+
+const fields: {
+  name: keyof TAuthFormData
+  title: string
+  placeholder: string
+}[] = [
+  { name: 'login', title: 'Логин', placeholder: 'Введите логин' },
+  { name: 'password', title: 'Пароль', placeholder: 'Введите пароль' },
 ]
 
 const AuthPage = (): JSX.Element => {
@@ -18,25 +23,24 @@ const AuthPage = (): JSX.Element => {
   }
 
   return (
-    <div>
+    <div className={classes.authBlock}>
       <h1>Вход</h1>
       <form onSubmit={submitForm}>
         {fields.map((item, i) => (
-          <div key={i}>
-            <label>
-              {item.title}
-              <input
-                type={item.name}
-                value={formData[item.name]}
-                onChange={(e) =>
-                  setFormData((old) => ({
-                    ...old,
-                    [item.name]: e.target.value,
-                  }))
-                }
-              />
-            </label>
-          </div>
+          <label key={i}>
+            {item.title}
+            <input
+              type={item.name}
+              value={formData[item.name]}
+              placeholder={item.placeholder}
+              onChange={(e) =>
+                setFormData((old) => ({
+                  ...old,
+                  [item.name]: e.target.value,
+                }))
+              }
+            />
+          </label>
         ))}
         <button>Войти</button>
       </form>

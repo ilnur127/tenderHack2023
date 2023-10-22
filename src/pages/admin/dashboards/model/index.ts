@@ -1,8 +1,6 @@
 import { createEffect, createEvent, createStore, sample } from 'effector'
 
-import statistics from './statistic.json'
-
-export type TChart3 = { className: string; solved: number, unresolved: number }
+export type TChart3 = { className: string; solved: number; unresolved: number }
 type TStatistics = {
   chart1: { className: string; counts: number[] }[] | null
   chart2:
@@ -19,8 +17,12 @@ export const getStatistics = createEvent<{
 }>()
 
 export const getStatisticsFx = createEffect(
-  ({ startDate, endDate }: params): TStatistics => {
-    return statistics
+  async ({ startDate, endDate }: params): Promise<TStatistics> => {
+    const response = await fetch(
+      `https://localhost:8080/api/statistics?startDate=${startDate}&endDate=${endDate}`
+    )
+    const data = await response.json()
+    return data
   }
 )
 

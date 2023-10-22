@@ -1,14 +1,14 @@
 .parentForChart {
-    position: relative;
-    height: 40vh;
-    width: 100vw;
+  position: relative;
+  height: 40vh;
+  width: 100vw;
 }
 .mainChart,
 .typesChart {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .mainChart > *,
 .typesChart > * {
-    justify-self: center;
+  justify-self: center;
 }

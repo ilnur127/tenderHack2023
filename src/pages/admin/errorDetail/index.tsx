@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { $errorInfo, getErrorInfo } from './model'
+import { $errorInfo, TFormData, changeErrorInfo, getErrorInfo } from './model'
 import { useStore } from 'effector-react'
 
 import classes from './index.module.css'
@@ -10,11 +10,6 @@ import { ReactComponent as SavedSvg } from './icons/Saved.svg'
 import clsx from 'clsx'
 import { format } from 'date-fns'
 
-type TFormData = {
-  title: string | null
-  description: string | null
-  solution: string | null
-}
 const fields: { name: keyof TFormData; title: string; placeholder: string }[] =
   [
     {
@@ -47,6 +42,8 @@ const ErrorDetail = (): JSX.Element => {
       setFormData({ title, description, solution })
     }
   }, [errorInfo])
+
+  const saveChangedErrorData = () => changeErrorInfo({ ...formData, errorId })
 
   return (
     <div className={classes.main}>
@@ -117,7 +114,10 @@ const ErrorDetail = (): JSX.Element => {
           <BackSvg />
           <span>Назад</span>
         </Link>
-        <button className={classes.actionsBlock_save}>
+        <button
+          className={classes.actionsBlock_save}
+          onClick={saveChangedErrorData}
+        >
           <SavedSvg />
           <span>Сохранить</span>
         </button>

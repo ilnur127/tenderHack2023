@@ -1,12 +1,18 @@
 import { MainLayout, ProtectedRoute } from '../../layout'
-import { ErrorsList, DashboardsPage, AuthPage, ErrorDetail } from '../../pages'
+import {
+  ErrorsList,
+  DashboardsPage,
+  AuthPage,
+  ErrorDetail,
+  MainPage,
+} from '../../pages'
 
 export const routes = [
   {
     path: '/',
     element: (
       <MainLayout>
-        <AuthPage />
+        <MainPage />
       </MainLayout>
     ),
   },

@@ -1,7 +1,21 @@
 import { createEffect, createEvent, createStore, sample } from 'effector'
 
-import data from './json.json'
-
+type TResponseData = {
+  classEnum: string
+  classDescription: string
+  errorModelList: {
+    id: number
+    type: string
+    typeDescription: string
+    key: string
+    title: string | null
+    description: string | null
+    solution: string | null
+    status: string
+    count: number
+    lastDate: string
+  }[]
+}
 export type TGroup = {
   id: number
   type: string
@@ -36,8 +50,10 @@ export const $classes = createStore<TClasses[]>([])
 
 export const getClassesErrors = createEvent()
 
-const getClassesErrorsFx = createEffect((): TClassesErrors => {
-  return data.data.map((item) => {
+const getClassesErrorsFx = createEffect(async (): Promise<TClassesErrors> => {
+  const response = await fetch('https://localhost:8080/api/get-errors')
+  const { data } = await response.json()
+  return data.map((item: TResponseData) => {
     const { classDescription, classEnum, errorModelList } = item
     const types = {} as Record<string, TGroup[]>
     for (const value of errorModelList) {
