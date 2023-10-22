@@ -52,7 +52,7 @@ export const getClassesErrors = createEvent()
 
 const getClassesErrorsFx = createEffect(async (): Promise<TClassesErrors> => {
   const response = await fetch('http://localhost:8080/api/get-errors')
-  const { data } = await response.json()
+  const data = await response.json()
   return data.map((item: TResponseData) => {
     const { classDescription, classEnum, errorModelList } = item
     const types = {} as Record<string, TGroup[]>
