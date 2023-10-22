@@ -5,6 +5,7 @@ import {
   AuthPage,
   ErrorDetail,
   MainPage,
+  UserPage,
 } from '../../pages'
 
 export const routes = [
@@ -70,6 +71,16 @@ export const routes = [
       <ProtectedRoute>
         <MainLayout>
           <DashboardsPage />
+        </MainLayout>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: '/user',
+    element: (
+      <ProtectedRoute>
+        <MainLayout>
+          <UserPage />
         </MainLayout>
       </ProtectedRoute>
     ),
