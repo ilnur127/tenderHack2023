@@ -23,7 +23,7 @@ export const $errorInfo = createStore<TError | null>(null)
 
 export const getErrorInfo = createEvent<string>()
 export const changeErrorInfo = createEvent<
-  TFormData & { errorId: string | undefined }
+  TFormData & { id: number }
 >()
 
 export const getErrorInfoFx = createEffect(
@@ -35,7 +35,7 @@ export const getErrorInfoFx = createEffect(
 )
 export const changeErrorInfoFx = createEffect(
   async (
-    formData: TFormData & { errorId: string | undefined }
+    formData: TFormData & { id: number }
   ): Promise<TError> => {
     const response = await fetch(
       'http://localhost:8080/api/error',

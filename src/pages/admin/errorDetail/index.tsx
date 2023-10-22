@@ -46,7 +46,7 @@ const ErrorDetail = (): JSX.Element => {
     }
   }, [errorInfo])
 
-  const saveChangedErrorData = () => changeErrorInfo({ ...formData, errorId })
+  const saveChangedErrorData = () => changeErrorInfo({ ...formData, id: Number(errorId) })
 
   if (isLoadingGet || isLoadingPost) {
     return <Loader />
