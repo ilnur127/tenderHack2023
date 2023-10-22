@@ -14,6 +14,7 @@ const authFx = createEffect(
   async (formData: TAuthFormData): Promise<{ role: string }> => {
     const response = await fetch('https://localhost:8080/api/login', {
       method: 'POST',
+      headers: new Headers({'content-type': 'application/json'}),
       body: JSON.stringify(formData),
     })
     const data = await response.json()
