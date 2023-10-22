@@ -12,3 +12,26 @@
 .typesChart > * {
   justify-self: center;
 }
+.periods {
+  display: flex;
+  grid-column-gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.periods label {
+  display: grid;
+  grid-row-gap: 4px;
+}
+.periods input {
+  border-radius: 10px;
+  width: 200px;
+  padding: 5px 10px;
+}
+.periods button {
+  border-radius: 10px;
+  background: #DB2B21;
+  border: none;
+  padding: 13px 20px;
+  align-self: end;
+  color: #fff;
+}

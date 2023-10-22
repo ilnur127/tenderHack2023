@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useStore } from 'effector-react'
 import { $statistics, TChart3, getStatistics, getStatisticsFx } from './model'
 import { Line, Bar } from 'react-chartjs-2'
@@ -54,17 +54,16 @@ const color: Record<string, string> = {
   3: '#0D9B68',
   4: '#F67319',
 }
+type TFormData = {startDate: string, endDate: string}
 
+const fields: {name: keyof TFormData, title: string}[] =[
+  {name: 'startDate', title: 'Начало периода'},
+  {name: 'endDate', title: 'Конец периода'},
+]
 const DashboardsPage = (): JSX.Element => {
   const statistics = useStore($statistics)
   const isLoading = useStore(getStatisticsFx.pending)
-
-  useEffect(() => {
-    getStatistics({
-      startDate: '2023-10-09',
-      endDate: '2023-10-16',
-    })
-  }, [])
+  const [formData, setFormData] = useState<TFormData>({} as TFormData)
 
   if (isLoading) {
     return <Loader />
@@ -72,7 +71,17 @@ const DashboardsPage = (): JSX.Element => {
 
   return (
     <div>
-      <div></div>
+      <div className={classes.periods}>
+        {
+          fields.map((item, i) => (
+            <label key={i}>
+              {item.title}
+              <input type='date' value={formData[item.name]} onChange={(e) => setFormData((old) => ({...old, [item.name]: e.target.value}))}/>
+            </label>
+          ))
+        }
+        <button onClick={() => getStatistics(formData)}>Отобразить</button>
+      </div>
       {statistics && (
         <>
           <div className={clsx(classes.parentForChart, classes.mainChart)}>

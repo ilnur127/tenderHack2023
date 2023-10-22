@@ -68,11 +68,11 @@ export const routes = [
   {
     path: '/admin/dashboards',
     element: (
-      <ProtectedRoute>
+      // <ProtectedRoute>
         <MainLayout>
           <DashboardsPage />
         </MainLayout>
-      </ProtectedRoute>
+      // </ProtectedRoute>
     ),
   },
   {
