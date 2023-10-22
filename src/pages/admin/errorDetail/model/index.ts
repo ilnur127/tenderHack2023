@@ -20,6 +20,7 @@ export type TFormData = {
 }
 
 export const $errorInfo = createStore<TError | null>(null)
+export const $successPost = createStore<boolean>(false)
 
 export const getErrorInfo = createEvent<string>()
 export const changeErrorInfo = createEvent<
@@ -65,4 +66,9 @@ sample({
 sample({
   clock: changeErrorInfoFx.doneData,
   target: $errorInfo,
+})
+sample({
+  clock: changeErrorInfoFx.doneData,
+  fn: () => true,
+  target: $successPost,
 })

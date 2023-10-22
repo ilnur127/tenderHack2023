@@ -20,7 +20,7 @@ const MainLayout = ({ children }: Props): JSX.Element => {
     <div>
       {userInfo && (
         <header className={classes.header}>
-          <LogoSvg />
+          <Link to='/'><LogoSvg /></Link>
           <div className={classes.routes}>
             {[
               { text: 'Ошибки', component: <ErrorsSvg />, link: '/admin' },

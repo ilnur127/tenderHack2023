@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { $errorInfo, TFormData, changeErrorInfo, changeErrorInfoFx, getErrorInfo, getErrorInfoFx } from './model'
+import { $errorInfo, $successPost, TFormData, changeErrorInfo, changeErrorInfoFx, getErrorInfo, getErrorInfoFx } from './model'
 import { useStore } from 'effector-react'
 
 import classes from './index.module.css'
@@ -10,6 +10,7 @@ import { ReactComponent as SavedSvg } from './icons/Saved.svg'
 import clsx from 'clsx'
 import { format } from 'date-fns'
 import { Loader } from '../../../shared'
+import { toast } from 'react-toastify'
 
 const fields: { name: keyof TFormData; title: string; placeholder: string }[] =
   [
@@ -30,6 +31,7 @@ const ErrorDetail = (): JSX.Element => {
   const [formData, setFormData] = useState<TFormData>({} as TFormData)
 
   const errorInfo = useStore($errorInfo)
+  const isDonePost = useStore($successPost)
   const isLoadingGet = useStore(getErrorInfoFx.pending)
   const isLoadingPost = useStore(changeErrorInfoFx.pending)
 
@@ -52,6 +54,9 @@ const ErrorDetail = (): JSX.Element => {
     return <Loader />
   }
 
+  if (isDonePost) {
+    toast("Изменения успешно изменены")
+  }
   return (
     <div className={classes.main}>
       {errorInfo && (
