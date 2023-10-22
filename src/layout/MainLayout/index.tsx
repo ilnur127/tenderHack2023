@@ -8,7 +8,7 @@ import { ReactComponent as LocationSvg } from './icons/location.svg'
 import { ReactComponent as NotificationsSvg } from './icons/notifications.svg'
 import { ReactComponent as AdminIconSvg } from './icons/adminIcon.svg'
 import { useStore } from 'effector-react'
-import { $userInfo } from '../../pages/auth/model'
+import { $userInfo, setUserInfo } from '../../pages/auth/model'
 import { Link, useNavigate } from 'react-router-dom'
 
 type Props = {
@@ -52,8 +52,9 @@ const MainLayout = ({ children }: Props): JSX.Element => {
                 <span>Администратор</span>
                 <span onClick={() => {
                   localStorage.setItem('userRole', '');
+                  setUserInfo(null)
                   navigate('/auth')
-                }}>Выход</span>
+                }} style={{cursor: 'pointer'}}>Выход</span>
               </div>
               <AdminIconSvg />
             </div>
