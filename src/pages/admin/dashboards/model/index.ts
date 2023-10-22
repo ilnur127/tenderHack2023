@@ -1,5 +1,7 @@
 import { createEffect, createEvent, createStore, sample } from 'effector'
 
+// import statistick from './statistic.json'
+
 export type TChart3 = { className: string; solved: number; unresolved: number }
 type TStatistics = {
   chart1: { className: string; counts: number[] }[] | null
@@ -27,6 +29,7 @@ export const getStatisticsFx = createEffect(
     })
     const data = await response.json()
     return data
+    // return statistick
   }
 )
 

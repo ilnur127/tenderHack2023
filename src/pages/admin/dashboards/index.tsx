@@ -70,7 +70,7 @@ const DashboardsPage = (): JSX.Element => {
   }
 
   return (
-    <div>
+    <div style={{margin: '0px 2.5vw'}}>
       <div className={classes.periods}>
         {
           fields.map((item, i) => (
