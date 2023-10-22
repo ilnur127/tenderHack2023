@@ -28,7 +28,7 @@ export const changeErrorInfo = createEvent<
 
 const getErrorInfoFx = createEffect(
   async (errorId: string): Promise<TError> => {
-    const response = await fetch('https://localhost:8080/api/error/' + errorId)
+    const response = await fetch('http://localhost:8080/api/error/' + errorId)
     const data = await response.json()
     return data
   }
@@ -38,7 +38,7 @@ const changeErrorInfoFx = createEffect(
     formData: TFormData & { errorId: string | undefined }
   ): Promise<TError> => {
     const response = await fetch(
-      'https://localhost:8080/localhost:8080/api/error',
+      'http://localhost:8080/localhost:8080/api/error',
       {
         method: 'POST',
         body: JSON.stringify(formData),
