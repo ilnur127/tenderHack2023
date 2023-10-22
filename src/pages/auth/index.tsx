@@ -36,7 +36,7 @@ const AuthPage = (): JSX.Element => {
             {item.title}
             <input
               type={item.name}
-              value={formData[item.name]}
+              value={formData[item.name] || ''}
               placeholder={item.placeholder}
               onChange={(e) =>
                 setFormData((old) => ({
