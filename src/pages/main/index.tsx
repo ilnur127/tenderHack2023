@@ -4,10 +4,10 @@ const MainPage = (): JSX.Element => {
   const userInfo = localStorage.getItem('userRole')
 
   if (userInfo) {
-    if (userInfo === 'admin') {
+    if (userInfo === 'ADMIN') {
       return <Navigate to="/admin" />
     }
-    if (userInfo === 'user') {
+    if (userInfo === 'USER') {
       return <Navigate to="/user" />
     }
   }
