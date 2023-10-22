@@ -50,9 +50,17 @@ const options = {
 
 const color: Record<string, string> = {
   1: '#264B82',
-  2: '#DB2B21',
-  3: '#0D9B68',
-  4: '#F67319',
+  2: '#D4DBE6',
+  3: '#E7EEF7',
+  4: '#DB2B21',
+  5: '#1A1A1A',
+  6: '#8C8C8C',
+  7: '#0D9B68',
+  8: '#167C85',
+  9: '#48B8C2',
+  10: '#F67319',
+  11: '#7F8792',
+  12: '#C9D1DF',
 }
 type TFormData = {startDate: string, endDate: string}
 
@@ -95,8 +103,8 @@ const DashboardsPage = (): JSX.Element => {
                     datasets: statistics.chart1.map((data, i) => ({
                       label: data.className,
                       data: data.counts,
-                      borderColor: color[i],
-                      backgroundColor: color[i],
+                      borderColor: color[i+1],
+                      backgroundColor: color[i+1],
                     })),
                   }}
                 />
@@ -123,12 +131,12 @@ const DashboardsPage = (): JSX.Element => {
                           arr.push({
                             label: curentItem.className + ' решн. задачи',
                             data: [curentItem.solved],
-                            backgroundColor: color[index],
+                            backgroundColor: color[index+1],
                           })
                           arr.push({
                             label: curentItem.className + ' решн. задачи',
                             data: [curentItem.unresolved],
-                            backgroundColor: color[index],
+                            backgroundColor: color[index+1],
                           })
                           return arr
                         },
@@ -152,8 +160,8 @@ const DashboardsPage = (): JSX.Element => {
                       datasets: type.data.map((data, i) => ({
                         label: data.typeName,
                         data: data.counts,
-                        borderColor: color[i],
-                        backgroundColor: color[i],
+                        borderColor: color[i+1],
+                        backgroundColor: color[i+1],
                       })),
                     }}
                   />
