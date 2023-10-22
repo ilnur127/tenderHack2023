@@ -1,4 +1,5 @@
 import { createEffect, createEvent, createStore, sample } from 'effector'
+import { toast } from 'react-toastify'
 
 export type TError = {
   id: number
@@ -20,7 +21,6 @@ export type TFormData = {
 }
 
 export const $errorInfo = createStore<TError | null>(null)
-export const $successPost = createStore<boolean>(false)
 
 export const getErrorInfo = createEvent<string>()
 export const changeErrorInfo = createEvent<
@@ -47,6 +47,7 @@ export const changeErrorInfoFx = createEffect(
       }
     )
     const data = await response.json()
+    toast("Изменения успешно изменены")
     return data
   }
 )
@@ -66,9 +67,4 @@ sample({
 sample({
   clock: changeErrorInfoFx.doneData,
   target: $errorInfo,
-})
-sample({
-  clock: changeErrorInfoFx.doneData,
-  fn: () => true,
-  target: $successPost,
 })

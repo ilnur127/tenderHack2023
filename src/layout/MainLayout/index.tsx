@@ -9,13 +9,14 @@ import { ReactComponent as NotificationsSvg } from './icons/notifications.svg'
 import { ReactComponent as AdminIconSvg } from './icons/adminIcon.svg'
 import { useStore } from 'effector-react'
 import { $userInfo } from '../../pages/auth/model'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 type Props = {
   children: ReactNode
 }
 const MainLayout = ({ children }: Props): JSX.Element => {
   const userInfo = useStore($userInfo)
+  const navigate = useNavigate()
   return (
     <div>
       {userInfo && (
@@ -49,6 +50,10 @@ const MainLayout = ({ children }: Props): JSX.Element => {
               <div>
                 <span>Александр Семёнов</span>
                 <span>Администратор</span>
+                <span onClick={() => {
+                  localStorage.setItem('userRole', '');
+                  navigate('/auth')
+                }}>Выход</span>
               </div>
               <AdminIconSvg />
             </div>
