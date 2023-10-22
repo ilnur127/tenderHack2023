@@ -7,9 +7,10 @@
   align-items: center;
 }
 .routes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   align-items: center;
+  justify-content: end;
+  grid-column-gap: 20px;
 }
 .routesItem {
   display: flex;

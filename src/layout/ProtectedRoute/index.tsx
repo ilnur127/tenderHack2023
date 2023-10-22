@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 import { Navigate } from 'react-router-dom'
-import { setUserInfo } from '../../pages/auth/model'
+import { setUserRole } from '../../pages/auth/model'
 
 const ProtectedRoute = ({ children }: { children: ReactNode }): JSX.Element => {
   const userInfo = localStorage.getItem('userRole')
 
-  setUserInfo(userInfo ? { role: userInfo } : null)
+  setUserRole(userInfo ? { role: userInfo } : null)
 
   if (!userInfo) {
     // user is not authenticated

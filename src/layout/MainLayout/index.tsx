@@ -8,7 +8,7 @@ import { ReactComponent as LocationSvg } from './icons/location.svg'
 import { ReactComponent as NotificationsSvg } from './icons/notifications.svg'
 import { ReactComponent as AdminIconSvg } from './icons/adminIcon.svg'
 import { useStore } from 'effector-react'
-import { $userInfo, setUserInfo } from '../../pages/auth/model'
+import { $userInfo, clearUserInfo } from '../../pages/auth/model'
 import { Link, useNavigate } from 'react-router-dom'
 
 type Props = {
@@ -23,7 +23,7 @@ const MainLayout = ({ children }: Props): JSX.Element => {
         <header className={classes.header}>
           <Link to='/'><LogoSvg /></Link>
           <div className={classes.routes}>
-            {[
+            {userInfo.role === 'ADMIN' &&[
               { text: 'Ошибки', component: <ErrorsSvg />, link: '/admin' },
               {
                 text: 'Дашборд',
@@ -48,11 +48,11 @@ const MainLayout = ({ children }: Props): JSX.Element => {
             </div>
             <div className={classes.userInfoBlock}>
               <div>
-                <span>Александр Семёнов</span>
-                <span>Администратор</span>
+                <span>{`${userInfo.surname} ${userInfo.name}`}</span>
+                <span>{userInfo.role === 'ADMIN' ? 'Администратор' : 'Пользователь'}</span>
                 <span onClick={() => {
                   localStorage.setItem('userRole', '');
-                  setUserInfo(null)
+                  clearUserInfo(null)
                   navigate('/auth')
                 }} style={{cursor: 'pointer'}}>Выход</span>
               </div>

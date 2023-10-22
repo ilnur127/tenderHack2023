@@ -5,14 +5,21 @@ export type TAuthFormData = {
   password: string
 }
 
-export const $userInfo = createStore<{ role: string } | null>(null)
+type UserInfo = {
+  role: string
+  name: string
+  surname: string
+}
+
+export const $userInfo = createStore<UserInfo| null>(null)
 export const $successAuth = createStore<boolean>(false)
 
 export const authEvent = createEvent<TAuthFormData>()
-export const setUserInfo = createEvent<{ role: string } | null>()
+export const clearUserInfo = createEvent<null>()
+export const setUserRole = createEvent<{ role: string } | null>()
 
 const authFx = createEffect(
-  async (formData: TAuthFormData): Promise<{ role: string }> => {
+  async (formData: TAuthFormData): Promise<UserInfo> => {
     const response = await fetch('http://localhost:8080/api/login', {
       method: 'POST',
       headers: new Headers({'Content-Type': 'application/json;charset=utf-8'}),
@@ -25,8 +32,9 @@ const authFx = createEffect(
 )
 
 sample({
-  clock: setUserInfo,
-  target: $userInfo,
+  source: setUserRole,
+  fn: (sourceData, clockData) => ({...clockData, ...sourceData}),
+  clock: $userInfo,
 })
 
 sample({
@@ -41,4 +49,8 @@ sample({
   clock: authFx.doneData,
   fn: () => true,
   target: $successAuth,
+})
+sample({
+  clock: clearUserInfo,
+  target: $userInfo,
 })
