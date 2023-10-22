@@ -17,9 +17,12 @@ export const getStatistics = createEvent<{
 }>()
 
 export const getStatisticsFx = createEffect(
-  async ({ startDate, endDate }: params): Promise<TStatistics> => {
+  async (params: params): Promise<TStatistics> => {
     const response = await fetch(
-      `https://localhost:8080/api/statistics?startDate=${startDate}&endDate=${endDate}`
+      `https://localhost:8080/api/statistics`, {
+        method: 'POST',
+        body: JSON.stringify(params)
+      }
     )
     const data = await response.json()
     return data

@@ -27,4 +27,9 @@
   border: none;
   color: #fff;
   font-size: 16px;
+  opacity: 0.85;
+  cursor: pointer;
+}
+.authBlock button:hover {
+  opacity: 1;
 }
