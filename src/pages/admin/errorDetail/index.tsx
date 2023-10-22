@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { $errorInfo, TFormData, changeErrorInfo, getErrorInfo } from './model'
+import { $errorInfo, TFormData, changeErrorInfo, changeErrorInfoFx, getErrorInfo, getErrorInfoFx } from './model'
 import { useStore } from 'effector-react'
 
 import classes from './index.module.css'
@@ -9,6 +9,7 @@ import { ReactComponent as PublishedSvg } from './icons/Published.svg'
 import { ReactComponent as SavedSvg } from './icons/Saved.svg'
 import clsx from 'clsx'
 import { format } from 'date-fns'
+import { Loader } from '../../../shared'
 
 const fields: { name: keyof TFormData; title: string; placeholder: string }[] =
   [
@@ -29,6 +30,8 @@ const ErrorDetail = (): JSX.Element => {
   const [formData, setFormData] = useState<TFormData>({} as TFormData)
 
   const errorInfo = useStore($errorInfo)
+  const isLoadingGet = useStore(getErrorInfoFx.pending)
+  const isLoadingPost = useStore(changeErrorInfoFx.pending)
 
   useEffect(() => {
     if (errorId) {
@@ -44,6 +47,10 @@ const ErrorDetail = (): JSX.Element => {
   }, [errorInfo])
 
   const saveChangedErrorData = () => changeErrorInfo({ ...formData, errorId })
+
+  if (isLoadingGet || isLoadingPost) {
+    return <Loader />
+  }
 
   return (
     <div className={classes.main}>

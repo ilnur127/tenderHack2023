@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useStore } from 'effector-react'
-import { $statistics, TChart3, getStatistics } from './model'
+import { $statistics, TChart3, getStatistics, getStatisticsFx } from './model'
 import { Line, Bar } from 'react-chartjs-2'
 import { format } from 'date-fns'
 import {
@@ -15,6 +15,7 @@ import {
 } from 'chart.js'
 import classes from './index.module.css'
 import clsx from 'clsx'
+import { Loader } from '../../../shared'
 
 function dateRange(startDate: string, endDate: string) {
   const dateArray = []
@@ -56,6 +57,7 @@ const color: Record<string, string> = {
 
 const DashboardsPage = (): JSX.Element => {
   const statistics = useStore($statistics)
+  const isLoading = useStore(getStatisticsFx.pending)
 
   useEffect(() => {
     getStatistics({
@@ -63,6 +65,10 @@ const DashboardsPage = (): JSX.Element => {
       endDate: '2023-10-16',
     })
   }, [])
+
+  if (isLoading) {
+    return <Loader />
+  }
 
   return (
     <div>

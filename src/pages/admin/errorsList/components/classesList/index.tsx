@@ -3,11 +3,12 @@ import clsx from 'clsx'
 import { useStore } from 'effector-react'
 import { format } from 'date-fns'
 
-import { $classesErrors, TClassesError, TGroup } from './model'
+import { $classesErrors, TClassesError, TGroup, getClassesErrorsFx } from './model'
 import classes from '../../index.module.css'
 import { ReactComponent as GoToErrorSvg } from '../../icons/goToError.svg'
 import { ReactComponent as ErrorDecisionSvg } from '../../icons/errorDecision.svg'
 import { TFilterData } from '../..'
+import { Loader } from '../../../../../shared'
 
 const ClassesList = ({
   selectedFilterData,
@@ -15,6 +16,7 @@ const ClassesList = ({
   selectedFilterData: TFilterData
 }): JSX.Element => {
   const classesErrors = useStore($classesErrors)
+  const isLoading = useStore(getClassesErrorsFx.pending)
 
   const filterCategoryFunction = (item: TClassesError) => {
     if (selectedFilterData.category) {
@@ -28,6 +30,10 @@ const ClassesList = ({
       return groupError.count && !groupError.solution
     }
     return groupError.count
+  }
+
+  if (isLoading) {
+    return <Loader />
   }
 
   return (
