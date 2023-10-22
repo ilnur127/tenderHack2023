@@ -21,6 +21,7 @@ export const getStatisticsFx = createEffect(
     const response = await fetch(
       `http://localhost:8080/api/statistics`, {
         method: 'POST',
+        headers: new Headers({'Content-Type': 'application/json;charset=utf-8'}),
         body: JSON.stringify(params)
       }
     )

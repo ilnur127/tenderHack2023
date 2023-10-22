@@ -41,6 +41,7 @@ const changeErrorInfoFx = createEffect(
       'http://localhost:8080/localhost:8080/api/error',
       {
         method: 'POST',
+        headers: new Headers({'Content-Type': 'application/json;charset=utf-8'}),
         body: JSON.stringify(formData),
       }
     )
