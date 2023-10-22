@@ -6,6 +6,7 @@ export type TAuthFormData = {
 }
 
 export const $userInfo = createStore<{ role: string } | null>(null)
+export const $successAuth = createStore<boolean>(false)
 
 export const authEvent = createEvent<TAuthFormData>()
 export const setUserInfo = createEvent<{ role: string } | null>()
@@ -35,4 +36,9 @@ sample({
 sample({
   clock: authFx.doneData,
   target: $userInfo,
+})
+sample({
+  clock: authFx.doneData,
+  fn: () => true,
+  target: $successAuth,
 })

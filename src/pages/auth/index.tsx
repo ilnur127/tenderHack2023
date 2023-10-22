@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { authEvent, type TAuthFormData } from './model'
+import { $successAuth, authEvent, type TAuthFormData } from './model'
 import classes from './index.module.css'
+import { useStore } from 'effector-react'
 
 const fields: {
   name: keyof TAuthFormData
@@ -14,14 +15,18 @@ const fields: {
 ]
 
 const AuthPage = (): JSX.Element => {
+  const successAuth = useStore($successAuth);
   const [formData, setFormData] = useState<TAuthFormData>({} as TAuthFormData)
   const navigate = useNavigate()
+
   const submitForm = (e: React.FormEvent) => {
     e.preventDefault()
     authEvent(formData)
-    navigate('/')
   }
 
+  if(successAuth) {
+    navigate('/')
+  }
   return (
     <div className={classes.authBlock}>
       <h1>Вход</h1>
