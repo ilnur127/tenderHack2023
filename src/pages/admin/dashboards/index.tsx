@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useStore } from 'effector-react'
 import { $statistics, TChart3, getStatistics, getStatisticsFx } from './model'
 import { Line, Bar } from 'react-chartjs-2'
@@ -86,70 +86,78 @@ const DashboardsPage = (): JSX.Element => {
         <>
           <div className={clsx(classes.parentForChart, classes.mainChart)}>
             {statistics.chart1 && (
-              <Line
-                options={options}
-                data={{
-                  labels: dateRange('2023-10-09', '2023-10-16'),
-                  datasets: statistics.chart1.map((data, i) => ({
-                    label: data.className,
-                    data: data.counts,
-                    borderColor: color[i],
-                    backgroundColor: color[i],
-                  })),
-                }}
-              />
-            )}
-            {statistics.chart3 && (
-              <Bar
-                options={options}
-                data={{
-                  labels: [''],
-                  datasets: [
-                    ...statistics.chart3.reduce(
-                      (
-                        arr: {
-                          label: string
-                          data: number[]
-                          backgroundColor: string
-                        }[],
-                        curentItem: TChart3,
-                        index: number
-                      ) => {
-                        arr.push({
-                          label: curentItem.className + ' решн. задачи',
-                          data: [curentItem.solved],
-                          backgroundColor: color[index],
-                        })
-                        arr.push({
-                          label: curentItem.className + ' решн. задачи',
-                          data: [curentItem.unresolved],
-                          backgroundColor: color[index],
-                        })
-                        return arr
-                      },
-                      []
-                    ),
-                  ],
-                }}
-              />
-            )}
-          </div>
-          <div className={clsx(classes.parentForChart, classes.typesChart)}>
-            {statistics.chart2 &&
-              statistics.chart2.map((type, i) => (
+              <div>
+                <div>Статистика ошибок по всех классам</div>
                 <Line
-                  key={i}
                   options={options}
                   data={{
                     labels: dateRange('2023-10-09', '2023-10-16'),
-                    datasets: type.data.map((data, i) => ({
-                      label: data.typeName,
+                    datasets: statistics.chart1.map((data, i) => ({
+                      label: data.className,
                       data: data.counts,
                       borderColor: color[i],
                       backgroundColor: color[i],
                     })),
                   }}
                 />
+              </div>
+            )}
+            {statistics.chart3 && (
+              <div>
+                <div>Статистика решенных/не решенных ошибок</div>
+                <Bar
+                  options={options}
+                  data={{
+                    labels: [''],
+                    datasets: [
+                      ...statistics.chart3.reduce(
+                        (
+                          arr: {
+                            label: string
+                            data: number[]
+                            backgroundColor: string
+                          }[],
+                          curentItem: TChart3,
+                          index: number
+                        ) => {
+                          arr.push({
+                            label: curentItem.className + ' решн. задачи',
+                            data: [curentItem.solved],
+                            backgroundColor: color[index],
+                          })
+                          arr.push({
+                            label: curentItem.className + ' решн. задачи',
+                            data: [curentItem.unresolved],
+                            backgroundColor: color[index],
+                          })
+                          return arr
+                        },
+                        []
+                      ),
+                    ],
+                  }}
+                />
+              </div>
+            )}
+          </div>
+          <div className={clsx(classes.parentForChart, classes.typesChart)}>
+            {statistics.chart2 &&
+              statistics.chart2.map((type, i) => (
+                <div key={i}>
+                  <div>{`Статистика для класса ${type.className}`}</div>
+                  <Line
+                    options={options}
+                    data={{
+                      labels: dateRange('2023-10-09', '2023-10-16'),
+                      datasets: type.data.map((data, i) => ({
+                        label: data.typeName,
+                        data: data.counts,
+                        borderColor: color[i],
+                        backgroundColor: color[i],
+                      })),
+                    }}
+                  />
+                </div>
               ))}
           </div>
         </>
