@@ -11,7 +11,7 @@ type UserInfo = {
   surname: string
 }
 
-export const $userInfo = createStore<UserInfo| null>(null)
+export const $userInfo = createStore<UserInfo | null>(null)
 export const $successAuth = createStore<boolean>(false)
 
 export const authEvent = createEvent<TAuthFormData>()
@@ -22,7 +22,9 @@ const authFx = createEffect(
   async (formData: TAuthFormData): Promise<UserInfo> => {
     const response = await fetch('http://localhost:8080/api/login', {
       method: 'POST',
-      headers: new Headers({'Content-Type': 'application/json;charset=utf-8'}),
+      headers: new Headers({
+        'Content-Type': 'application/json;charset=utf-8',
+      }),
       body: JSON.stringify(formData),
     })
     const data = await response.json()
@@ -33,7 +35,7 @@ const authFx = createEffect(
 
 sample({
   source: setUserRole,
-  fn: (sourceData, clockData) => ({...clockData, ...sourceData}),
+  fn: (sourceData, clockData) => ({ ...clockData, ...sourceData }),
   clock: $userInfo,
 })
 

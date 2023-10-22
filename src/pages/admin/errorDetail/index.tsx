@@ -1,6 +1,17 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { $errorInfo, TFormData, changeErrorInfo, changeErrorInfoFx, getErrorInfo, getErrorInfoFx } from './model'
+import {
+  $errorInfo,
+  TFormData,
+  changeErrorInfo,
+  changeErrorInfoFx,
+  getErrorInfo,
+  getErrorInfoFx,
+  sendNotiForAllUser,
+  sendNotiForAllUserFx,
+  sendNotiForUser,
+  sendNotiForUserFx,
+} from './model'
 import { useStore } from 'effector-react'
 
 import classes from './index.module.css'
@@ -28,10 +39,13 @@ const fields: { name: keyof TFormData; title: string; placeholder: string }[] =
 const ErrorDetail = (): JSX.Element => {
   const { errorId } = useParams()
   const [formData, setFormData] = useState<TFormData>({} as TFormData)
+  const [userName, setUserName] = useState('')
 
   const errorInfo = useStore($errorInfo)
   const isLoadingGet = useStore(getErrorInfoFx.pending)
   const isLoadingPost = useStore(changeErrorInfoFx.pending)
+  const isLoadingSendAll = useStore(sendNotiForAllUserFx.pending)
+  const isLoadingSend = useStore(sendNotiForUserFx.pending)
 
   useEffect(() => {
     if (errorId) {
@@ -46,9 +60,10 @@ const ErrorDetail = (): JSX.Element => {
     }
   }, [errorInfo])
 
-  const saveChangedErrorData = () => changeErrorInfo({ ...formData, id: Number(errorId) })
+  const saveChangedErrorData = () =>
+    changeErrorInfo({ ...formData, id: Number(errorId) })
 
-  if (isLoadingGet || isLoadingPost) {
+  if (isLoadingGet || isLoadingPost || isLoadingSendAll || isLoadingSend) {
     return <Loader />
   }
 
@@ -128,15 +143,34 @@ const ErrorDetail = (): JSX.Element => {
           <SavedSvg />
           <span>Сохранить</span>
         </button>
-        <button className={classes.actionsBlock_publishAll}>
+        <button
+          className={classes.actionsBlock_publishAll}
+          onClick={() =>
+            sendNotiForAllUser({
+              description: errorInfo?.description || '',
+              decision: errorInfo?.solution || '',
+            })
+          }
+        >
           <PublishedSvg />
           <span>Сообщить всем</span>
         </button>
         <div className={classes.actionsBlock_publishCurrent}>
           <h4>Сообщить конкретному пользователю</h4>
           <div>
-            <input />
-            <button>
+            <input
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+            />
+            <button
+              onClick={() =>
+                sendNotiForUser({
+                  username: userName,
+                  description: errorInfo?.description || '',
+                  decision: errorInfo?.solution || '',
+                })
+              }
+            >
               <PublishedSvg fill="#264B82" />
             </button>
           </div>

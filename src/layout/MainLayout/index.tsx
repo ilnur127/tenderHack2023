@@ -21,21 +21,24 @@ const MainLayout = ({ children }: Props): JSX.Element => {
     <div>
       {userInfo && (
         <header className={classes.header}>
-          <Link to='/'><LogoSvg /></Link>
+          <Link to="/">
+            <LogoSvg />
+          </Link>
           <div className={classes.routes}>
-            {userInfo.role === 'ADMIN' &&[
-              { text: 'Ошибки', component: <ErrorsSvg />, link: '/admin' },
-              {
-                text: 'Дашборд',
-                component: <DashboardsSvg />,
-                link: '/admin/dashboards',
-              },
-            ].map((item, i) => (
-              <Link key={i} to={item.link} className={classes.routesItem}>
-                {item.component}
-                <span>{item.text}</span>
-              </Link>
-            ))}
+            {userInfo.role === 'ADMIN' &&
+              [
+                { text: 'Ошибки', component: <ErrorsSvg />, link: '/admin' },
+                {
+                  text: 'Дашборд',
+                  component: <DashboardsSvg />,
+                  link: '/admin/dashboards',
+                },
+              ].map((item, i) => (
+                <Link key={i} to={item.link} className={classes.routesItem}>
+                  {item.component}
+                  <span>{item.text}</span>
+                </Link>
+              ))}
             <div className={classes.routesItem}>
               <LocationSvg />
               <span>Республика Татарстан</span>
@@ -49,12 +52,19 @@ const MainLayout = ({ children }: Props): JSX.Element => {
             <div className={classes.userInfoBlock}>
               <div>
                 <span>{`${userInfo.surname} ${userInfo.name}`}</span>
-                <span>{userInfo.role === 'ADMIN' ? 'Администратор' : 'Пользователь'}</span>
-                <span onClick={() => {
-                  localStorage.setItem('userRole', '');
-                  clearUserInfo(null)
-                  navigate('/auth')
-                }} style={{cursor: 'pointer'}}>Выход</span>
+                <span>
+                  {userInfo.role === 'ADMIN' ? 'Администратор' : 'Пользователь'}
+                </span>
+                <span
+                  onClick={() => {
+                    localStorage.setItem('userRole', '')
+                    clearUserInfo(null)
+                    navigate('/auth')
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
+                  Выход
+                </span>
               </div>
               <AdminIconSvg />
             </div>

@@ -3,7 +3,12 @@ import clsx from 'clsx'
 import { useStore } from 'effector-react'
 import { format } from 'date-fns'
 
-import { $classesErrors, TClassesError, TGroup, getClassesErrorsFx } from './model'
+import {
+  $classesErrors,
+  TClassesError,
+  TGroup,
+  getClassesErrorsFx,
+} from './model'
 import classes from '../../index.module.css'
 import { ReactComponent as GoToErrorSvg } from '../../icons/goToError.svg'
 import { ReactComponent as ErrorDecisionSvg } from '../../icons/errorDecision.svg'

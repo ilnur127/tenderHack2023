@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 import classes from './index.module.css'
 
@@ -16,5 +16,5 @@ export default function Loader(): JSX.Element {
         <div />
       </div>
     </div>
-  );
+  )
 }

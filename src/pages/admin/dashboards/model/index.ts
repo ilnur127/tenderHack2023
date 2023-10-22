@@ -18,13 +18,13 @@ export const getStatistics = createEvent<{
 
 export const getStatisticsFx = createEffect(
   async (params: params): Promise<TStatistics> => {
-    const response = await fetch(
-      `http://localhost:8080/api/error-statistic`, {
-        method: 'POST',
-        headers: new Headers({'Content-Type': 'application/json;charset=utf-8'}),
-        body: JSON.stringify(params)
-      }
-    )
+    const response = await fetch(`http://localhost:8080/api/error-statistic`, {
+      method: 'POST',
+      headers: new Headers({
+        'Content-Type': 'application/json;charset=utf-8',
+      }),
+      body: JSON.stringify(params),
+    })
     const data = await response.json()
     return data
   }

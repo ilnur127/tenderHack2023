@@ -15,7 +15,7 @@ const fields: {
 ]
 
 const AuthPage = (): JSX.Element => {
-  const successAuth = useStore($successAuth);
+  const successAuth = useStore($successAuth)
   const [formData, setFormData] = useState<TAuthFormData>({} as TAuthFormData)
   const navigate = useNavigate()
 
@@ -24,7 +24,7 @@ const AuthPage = (): JSX.Element => {
     authEvent(formData)
   }
 
-  if(successAuth) {
+  if (successAuth) {
     navigate('/')
   }
   return (

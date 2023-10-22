@@ -50,29 +50,31 @@ export const $classes = createStore<TClasses[]>([])
 
 export const getClassesErrors = createEvent()
 
-export const getClassesErrorsFx = createEffect(async (): Promise<TClassesErrors> => {
-  const response = await fetch('http://localhost:8080/api/get-errors')
-  const data = await response.json()
-  return data.map((item: TResponseData) => {
-    const { classDescription, classEnum, errorModelList } = item
-    const types = {} as Record<string, TGroup[]>
-    for (const value of errorModelList) {
-      if (types[value.typeDescription]) {
-        types[value.typeDescription].push(value)
-      } else {
-        types[value.typeDescription] = [value]
+export const getClassesErrorsFx = createEffect(
+  async (): Promise<TClassesErrors> => {
+    const response = await fetch('http://localhost:8080/api/get-errors')
+    const data = await response.json()
+    return data.map((item: TResponseData) => {
+      const { classDescription, classEnum, errorModelList } = item
+      const types = {} as Record<string, TGroup[]>
+      for (const value of errorModelList) {
+        if (types[value.typeDescription]) {
+          types[value.typeDescription].push(value)
+        } else {
+          types[value.typeDescription] = [value]
+        }
       }
-    }
-    return {
-      className: classDescription,
-      classEnum,
-      types: Object.entries(types).map((value) => ({
-        typeDescription: value[0],
-        groups: value[1],
-      })),
-    }
-  })
-})
+      return {
+        className: classDescription,
+        classEnum,
+        types: Object.entries(types).map((value) => ({
+          typeDescription: value[0],
+          groups: value[1],
+        })),
+      }
+    })
+  }
+)
 
 sample({
   clock: getClassesErrors,
